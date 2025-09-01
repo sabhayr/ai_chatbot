@@ -1,15 +1,17 @@
+pip install --upgrade google-generativeai
+
 import streamlit as st
 import google.generativeai as genai
 
-st.set_page_config(page_title="Gemini Chatbot", page_icon="🤖", layout="centered")
+# Configure Gemini API key
+genai.configure(api_key="AIzaSyDjKnYmE12Hczu4wXvrmnJKsQpNyjE907M")
 
-st.title("🤖 Gemini AI Chatbot")
-st.write("Chat with Google's Gemini model!")
+# Use a supported model (gemini-1.5-pro or gemini-1.5-flash)
+model = genai.GenerativeModel("gemini-1.5-flash")
 
-# Load API Key from Streamlit secrets
-genai.configure(api_key=st.secrets.get("GEMINI_API_KEY", "your_gemini_api_key_here"))
-
-model = genai.GenerativeModel("gemini-pro")
+# Generate content
+response = model.generate_content("Write a short poem about AI and coffee.")
+print(response.text)
 
 def chat_with_ai(prompt):
     try:
