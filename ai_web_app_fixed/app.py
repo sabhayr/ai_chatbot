@@ -7,7 +7,7 @@ st.set_page_config(page_title="AI Chatbot", page_icon="🤖", layout="centered")
 st.title("🤖 AI Chatbot")
 st.write("Talk to your AI assistant right here!")
 
-client = OpenAI(api_key=st.secrets.get("OPENAI_API_KEY", "your_api_key_here"))
+client = OpenAI(api_key=st.secrets.get("OPENAI_API_KEY", "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"))
 
 def chat_with_ai(prompt):
     try:
