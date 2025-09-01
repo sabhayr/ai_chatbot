@@ -12,7 +12,7 @@ client = OpenAI(api_key=st.secrets.get("OPENAI_API_KEY", "sk-proj-X0kIBTBz8IdJDJ
 def chat_with_ai(prompt):
     try:
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
