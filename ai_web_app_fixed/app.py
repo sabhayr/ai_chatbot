@@ -7,7 +7,7 @@ import fitz  # PyMuPDF for PDFs
 # ===============================
 # CONFIGURE GEMINI API
 # ===============================
-API_KEY = "YOUR_GEMINI_API_KEY"  # 🔥 Replace this with st.secrets or your real key
+API_KEY = "AIzaSyCvI0c_O4w6RZKAl7LHveEQISL6wzHzVSg"  # 🔥 Replace this with st.secrets or your real key
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
